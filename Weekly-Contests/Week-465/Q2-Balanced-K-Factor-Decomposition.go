@@ -91,8 +91,8 @@ func minDifference(n int, k int) []int {
 }
 
 
-//runtime: 829 ms
-//memory: 10.58 MB
+//runtime: 829 ms, Beats 5.55%
+//memory: 10.58 MB, Beats 6.94%
 
 //Previously used a recursive approach which was even more memory intensive, 
 // this solution still seems to be using too many resources

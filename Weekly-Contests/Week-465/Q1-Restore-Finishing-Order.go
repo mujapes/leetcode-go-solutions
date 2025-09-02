@@ -12,5 +12,5 @@ func recoverOrder(order []int, friends []int) []int {
     return friendsOrder
 }
 
-//Runtime: 0ms
-//Memory: 5.27MB
+//Runtime: 0ms, Beats 100%
+//Memory: 5.27MB, Beats 53.70%
