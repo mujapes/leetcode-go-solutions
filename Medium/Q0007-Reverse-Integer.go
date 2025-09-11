@@ -1,4 +1,38 @@
-import "math"
+import (
+    "strings"
+    "strconv"
+)
+
+func reverse(x int) int {
+    var neg bool
+    ovflw := []int{2,1,4,7,4,8,3,6,4,7}
+    if x < 0 {
+        neg = true
+        x *= -1
+    }
+    xStr := strconv.Itoa(x)
+    if len(xStr) == 10 {
+        for i := range 10 {
+            d, _ := strconv.Atoi(string(xStr[9-i]))
+            if d > ovflw[i] {
+                return 0
+            } else if d < ovflw[i] {break}
+        }
+    }
+    var xStrRev strings.Builder
+    for i := len(xStr)-1; i >= 0; i-- {
+        xStrRev.WriteByte(xStr[i])
+    }
+    if xRev, _ := strconv.Atoi(xStrRev.String()); neg {
+        return -1 * xRev
+    } else {return xRev}
+}
+
+//Runtime: 0 ms, Beats 100.00%
+//Memory: 3.99 MB, Beats 81.13%
+
+
+/*import "math"
 
 func reverse(x int) int {
     if x == 0 {return 0}
@@ -28,7 +62,7 @@ func reverse(x int) int {
     }
     if neg {sum *= -1}
     return sum
-}
+}*/
 
 //Runtime: 5 ms, Beats 16.88%
 //Memory: 4.12 MB, Beats 4.82%
