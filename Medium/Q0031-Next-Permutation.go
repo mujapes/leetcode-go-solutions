@@ -18,6 +18,8 @@ func nextPermutation(nums []int)  {
     // Memory: 4.32 MB, Beats 37.50%
     
     /*
+    Took me a while but very rewarding
+    
     [1,2,3], 
     [1,3,2], 
     [2,1,3], 
