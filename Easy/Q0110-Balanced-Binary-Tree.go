@@ -6,6 +6,7 @@
  *     Right *TreeNode
  * }
  */
+// Better name: heightIfBalanced
 func depthIfSimilar(node *TreeNode, depth int) int {
     if node == nil {return depth}
     depth++
